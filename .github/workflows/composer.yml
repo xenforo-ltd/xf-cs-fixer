@@ -1,0 +1,39 @@
+name: Composer
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'composer.json'
+      - 'composer.lock'
+
+  pull_request:
+    branches:
+      - 'main'
+    paths:
+      - 'composer.json'
+      - 'composer.lock'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  composer:
+    name: Composer
+    runs-on: ubuntu-latest
+    container: ghcr.io/xenforo-ltd/php-ci:7.4
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Composer
+        run: composer validate

@@ -1,0 +1,41 @@
+{
+    "name": "xenforo-ltd/xf-cs-fixer",
+    "type": "library",
+    "license": "MIT",
+    "description": "A PHP Coding Standards Fixer configuration for XenForo",
+    "keywords": [
+        "xenforo",
+        "php-cs-fixer"
+    ],
+    "homepage": "https://github.com/xenforo-ltd/xf-cs-fixer",
+    "support": {
+        "docs": "https://github.com/xenforo-ltd/xf-cs-fixer/blob/main/README.md",
+        "issues": "https://github.com/xenforo-ltd/xf-cs-fixer/issues"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "XFCsFixer\\": "src/"
+        }
+    },
+    "scripts": {
+        "php-cs-fixer": "php-cs-fixer",
+        "php-cs-fixer:check": "php-cs-fixer check",
+        "php-cs-fixer:fix": "php-cs-fixer fix",
+        "phpstan": "phpstan",
+        "phpstan:all": "phpstan --configuration=phpstan.config.neon",
+        "phpstan:generate-baseline": "phpstan --generate-baseline=phpstan-baseline.php --allow-empty-baseline"
+    },
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "friendsofphp/php-cs-fixer": "^3.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.0",
+        "phpstan/phpstan-strict-rules": "^1.0"
+    }
+}

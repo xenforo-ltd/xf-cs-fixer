@@ -1,0 +1,18 @@
+parameters:
+	level: 9
+	paths:
+		- src
+	checkBenevolentUnionTypes: true
+	checkImplicitMixed: true
+	checkMissingCallableSignature: true
+	checkTooWideReturnTypesInProtectedAndPublicMethods: true
+	checkUninitializedProperties: true
+	rememberPossiblyImpureFunctionValues: true
+	reportAlwaysTrueInLastCondition: true
+	reportAnyTypeWideningInVarTag: true
+	reportPossiblyNonexistentConstantArrayOffset: true
+	reportPossiblyNonexistentGeneralArrayOffset: true
+
+includes:
+	- phar://phpstan.phar/conf/bleedingEdge.neon
+	- vendor/phpstan/phpstan-strict-rules/rules.neon
