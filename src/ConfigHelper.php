@@ -53,20 +53,21 @@ final class ConfigHelper
 		));
 
 		$this->config->setIndent($this->getIndent());
+		$this->config->setRules($this->getRules());
 
 		if ($allowRisky)
 		{
 			$this->config->setRiskyAllowed(true);
+			$this->mergeRules($this->getRiskyRules());
+		}
+	}
 
-			$this->config->setRules(array_merge(
-				$this->getRules(),
-				$this->getRiskyRules()
-			));
-		}
-		else
-		{
-			$this->config->setRules($this->getRules());
-		}
+	/**
+	 * @param array<string, bool|array<string, mixed>> $rules
+	 */
+	public function mergeRules(array $rules): void
+	{
+		$this->config->setRules(array_merge($this->config->getRules(), $rules));
 	}
 
 	/**

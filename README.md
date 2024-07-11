@@ -38,11 +38,11 @@ $finder = Finder::create()
 		// you may set paths or path patterns to exclude here
 	]);
 
-$config = (new ConfigHelper($finder))->getConfig();
+$helper = new ConfigHelper($finder);
 
-// you may customize the configuration object further here
+// you may customize the rules or configuration further here
 
-return $config
+return $helper->getConfig();
 ```
 
 For more information, consult the [PHP Coding Standards Fixer documentation](https://cs.symfony.com/#usage).
