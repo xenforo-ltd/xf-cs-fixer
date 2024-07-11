@@ -1,8 +1,9 @@
 # XenForo Coding Standards Fixer
 
-[![Composer](https://github.com/xenforo-ltd/xf-cs-fixer/actions/workflows/composer.yml/badge.svg?branch=main&event=push)](https://github.com/xenforo-ltd/xf-cs-fixer/actions/workflows/composer.yml)
-[![PHP-CS-Fixer](https://github.com/xenforo-ltd/xf-cs-fixer/actions/workflows/php-cs-fixer.yml/badge.svg?branch=main&event=push)](https://github.com/xenforo-ltd/xf-cs-fixer/actions/workflows/php-cs-fixer.yml)
-[![PHPStan](https://github.com/xenforo-ltd/xf-cs-fixer/actions/workflows/phpstan.yml/badge.svg?branch=main&event=push)](https://github.com/xenforo-ltd/xf-cs-fixer/actions/workflows/phpstan.yml)
+[![XenForo](https://img.shields.io/badge/XenForo-%230F578A)](https://xenforo.com)
+[![License](https://img.shields.io/packagist/l/xenforo-ltd/xf-cs-fixer?label=license)](https://packagist.org/packages/xenforo-ltd/xf-cs-fixer)
+[![Version](https://img.shields.io/packagist/v/xenforo-ltd/xf-cs-fixer?label=version)](https://packagist.org/packages/xenforo-ltd/xf-cs-fixer)
+[![Status](https://img.shields.io/github/check-runs/xenforo-ltd/xf-cs-fixer/main?label=status)](https://github.com/xenforo-ltd/xf-cs-fixer/actions)
 
 A [PHP Coding Standards Fixer](https://cs.symfony.com) configuration for [XenForo](https://xenforo.com).
 
