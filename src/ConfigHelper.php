@@ -52,7 +52,7 @@ final class ConfigHelper
 			$this->config->setRiskyAllowed(true);
 
 			$this->config->setRules(array_merge(
-				$this->config->getRules(),
+				$this->getRules(),
 				$this->getRiskyRules()
 			));
 		}
