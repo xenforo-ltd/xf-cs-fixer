@@ -44,7 +44,14 @@ final class ConfigHelper
 
 	public function setup(bool $allowRisky = false): void
 	{
-		$this->config->registerCustomFixers($this->getCustomFixers());
+		$this->config->registerCustomFixers(array_map(
+			function (string $fixerClass): FixerInterface
+			{
+				return new $fixerClass();
+			},
+			$this->getCustomFixers()
+		));
+
 		$this->config->setIndent($this->getIndent());
 
 		if ($allowRisky)
@@ -63,15 +70,15 @@ final class ConfigHelper
 	}
 
 	/**
-	 * @return list<FixerInterface>
+	 * @return list<class-string<FixerInterface>>
 	 */
 	public function getCustomFixers(): array
 	{
 		return [
-			new CurlyBracesPositionFixer(),
-			new ElseIfFixer(),
-			new GroupedFunctionUseStatementFixer(),
-			new UppercaseForeachAsFixer(),
+			CurlyBracesPositionFixer::class,
+			ElseIfFixer::class,
+			GroupedFunctionUseStatementFixer::class,
+			UppercaseForeachAsFixer::class,
 		];
 	}
 
