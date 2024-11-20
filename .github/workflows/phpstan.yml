@@ -32,7 +32,7 @@ jobs:
   phpstan:
     name: PHPStan
     runs-on: ubuntu-latest
-    container: ghcr.io/xenforo-ltd/php-ci:7.4
+    container: ghcr.io/xenforo-ltd/php-ci:8.2
 
     steps:
       - name: Install git
