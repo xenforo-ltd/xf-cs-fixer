@@ -133,6 +133,9 @@ final class ConfigHelper
 			'control_structure_continuation_position' => [ // we use allman braces
 				'position' => 'next_line',
 			],
+			'function_declaration' => [
+				'closure_fn_spacing' => 'one',
+			],
 
 			// @PER-CS2.0 customizations
 			'trailing_comma_in_multiline' => [ // retain PHP 7.2 compatibility
