@@ -27,7 +27,7 @@ jobs:
   php-cs-fixer:
     name: PHP CS Fixer
     runs-on: ubuntu-latest
-    container: ghcr.io/xenforo-ltd/php-ci:8.2
+    container: ghcr.io/xenforo-ltd/php-ci:8.1
 
     steps:
       - name: Install git
