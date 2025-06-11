@@ -9,6 +9,7 @@ use PhpCsFixer\Fixer\FixerInterface;
 use XFCsFixer\Fixer\CurlyBracesPositionFixer;
 use XFCsFixer\Fixer\ElseIfFixer;
 use XFCsFixer\Fixer\GroupedFunctionUseStatementFixer;
+use XFCsFixer\Fixer\NoStringVariableBracesFixer;
 use XFCsFixer\Fixer\UppercaseForeachAsFixer;
 
 final class ConfigHelper
@@ -79,10 +80,14 @@ final class ConfigHelper
 			CurlyBracesPositionFixer::class,
 			ElseIfFixer::class,
 			GroupedFunctionUseStatementFixer::class,
+			NoStringVariableBracesFixer::class,
 			UppercaseForeachAsFixer::class,
 		];
 	}
 
+	/**
+	 * @return non-empty-string
+	 */
 	public function getIndent(): string
 	{
 		return "\t";
