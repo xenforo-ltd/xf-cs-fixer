@@ -36,6 +36,11 @@ final class UppercaseForeachAsFixer extends AbstractFixer
 		);
 	}
 
+	public function getPriority(): int
+	{
+		return -1;
+	}
+
 	public function isCandidate(Tokens $tokens): bool
 	{
 		return $tokens->isAllTokenKindsFound([T_FOREACH, T_AS]);
