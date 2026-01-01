@@ -48,7 +48,7 @@ jobs:
           echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
       - name: Set up Composer cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ${{ steps.cache-data.outputs.composer_path }}
           key: composer-${{ steps.cache-data.outputs.date }}
@@ -58,7 +58,7 @@ jobs:
         run: composer install
 
       - name: Set up PHPStan cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: /tmp/phpstan
           key: phpstan-${{ steps.cache-data.outputs.date }}
