@@ -15,12 +15,12 @@ final class XenForoSet extends AbstractRuleSetDefinition
 
 	public function getDescription(): string
 	{
-		return 'Rules that follow the `XenForo` standard.';
+		return 'Rules that follow the `XenForo <https://xenforo.com>`_ coding standards. Extends ``@PER-CS3x0``.';
 	}
 
 	public function getRules(): array
 	{
-		return [
+		$rules = [
 			// base rulesets
 			'@PER-CS3x0' => true,
 			'@PHP7x1Migration' => true,
@@ -72,5 +72,9 @@ final class XenForoSet extends AbstractRuleSetDefinition
 				'elements' => ['arrays'],
 			],
 		];
+
+		ksort($rules);
+
+		return $rules;
 	}
 }
