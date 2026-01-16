@@ -1,17 +1,28 @@
 parameters:
-	level: 9
-	paths:
-		- src
-	checkBenevolentUnionTypes: true
-	checkImplicitMixed: true
-	checkMissingCallableSignature: true
+	level: 10
 	checkTooWideReturnTypesInProtectedAndPublicMethods: true
 	checkUninitializedProperties: true
 	rememberPossiblyImpureFunctionValues: true
+	checkBenevolentUnionTypes: true
+	reportPossiblyNonexistentGeneralArrayOffset: true
+	reportPossiblyNonexistentConstantArrayOffset: true
 	reportAlwaysTrueInLastCondition: true
 	reportAnyTypeWideningInVarTag: true
-	reportPossiblyNonexistentConstantArrayOffset: true
-	reportPossiblyNonexistentGeneralArrayOffset: true
+	checkMissingOverrideMethodAttribute: true
+	checkMissingCallableSignature: true
+
+	paths:
+		- src
+
+	ignoreErrors:
+		-
+			identifier: class.extendsInternalClass
+		-
+			identifier: property.internalClass
+		-
+			identifier: method.internalClass
+		-
+			identifier: traitUse.internalTrait
 
 includes:
 	- phar://phpstan.phar/conf/bleedingEdge.neon
