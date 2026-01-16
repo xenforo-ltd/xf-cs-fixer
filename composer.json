@@ -31,6 +31,15 @@
         "phpstan:all": "phpstan --configuration=phpstan.config.neon",
         "phpstan:generate-baseline": "phpstan --generate-baseline=phpstan-baseline.php --allow-empty-baseline"
     },
+    "scripts-descriptions": {
+        "php-cs-fixer": "Run PHP CS Fixer",
+        "php-cs-fixer:check": "Run PHP CS Fixer to check code formatting",
+        "php-cs-fixer:fix": "Run PHP CS Fixer to fix code formatting",
+
+        "phpstan": "Run PHPStan",
+        "phpstan:all": "Run PHPStan without the baseline",
+        "phpstan:generate-baseline": "Run PHPStan to regenerate the baseline"
+    },
     "require": {
         "php": "^7.4 || ^8.0",
         "friendsofphp/php-cs-fixer": "^3.89.1"
