@@ -22,7 +22,7 @@ final class XenForoSet extends AbstractRuleSetDefinition
 	{
 		return [
 			// base rulesets
-			'@PER-CS2x0' => true,
+			'@PER-CS3x0' => true,
 			'@PHP7x1Migration' => true,
 
 			// custom fixers
@@ -50,21 +50,24 @@ final class XenForoSet extends AbstractRuleSetDefinition
 				'sort_algorithm' => 'alpha',
 			],
 
-			// @PER-CS2.0 disablers
+			// @PER-CS2x0 disablers
 			'single_line_empty_body' => false,
 
 			// @PSR2 customizations
-			'braces_position' => [  // we use allman braces
-				'control_structures_opening_brace' => 'next_line_unless_newline_at_signature_end',
-			],
 			'control_structure_continuation_position' => [ // we use allman braces
 				'position' => 'next_line',
 			],
+
+			// @PSR12 customizations
+			'braces_position' => [  // we use allman braces
+				'control_structures_opening_brace' => 'next_line_unless_newline_at_signature_end',
+				'allow_single_line_empty_anonymous_classes' => true,
+			],
+
+			// @PER-CS2x0 customizations
 			'function_declaration' => [
 				'closure_fn_spacing' => 'one',
 			],
-
-			// @PER-CS2.0 customizations
 			'trailing_comma_in_multiline' => [ // retain PHP 7.2 compatibility
 				'elements' => ['arrays'],
 			],

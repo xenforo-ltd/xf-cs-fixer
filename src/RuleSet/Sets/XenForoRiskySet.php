@@ -21,7 +21,7 @@ final class XenForoRiskySet extends AbstractRuleSetDefinition
 	{
 		return [
 			// base rulesets
-			'@PER-CS2x0:risky' => true,
+			'@PER-CS3x0:risky' => true,
 			'@PHP7x1Migration:risky' => true,
 		];
 	}

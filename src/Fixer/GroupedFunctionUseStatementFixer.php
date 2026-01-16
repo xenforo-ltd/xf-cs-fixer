@@ -107,9 +107,9 @@ final class GroupedFunctionUseStatementFixer extends AbstractFixer
 		}
 
 		if (
-			$firstImportStartIndex === null ||
-			$firstImportEndIndex === null ||
-			$importedFunctions === []
+			$firstImportStartIndex === null
+			|| $firstImportEndIndex === null
+			|| $importedFunctions === []
 		)
 		{
 			return;

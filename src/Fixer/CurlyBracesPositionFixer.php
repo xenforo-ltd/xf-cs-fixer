@@ -63,9 +63,9 @@ final class CurlyBracesPositionFixer extends AbstractFixer implements Whitespace
 
 			$nextToken = $tokens[$index + 1] ?? null;
 			if (
-				$nextToken === null ||
-				!$nextToken->isGivenKind(T_WHITESPACE) ||
-				strpos($nextToken->getContent(), "\n") !== 0
+				$nextToken === null
+				|| !$nextToken->isGivenKind(T_WHITESPACE)
+				|| strpos($nextToken->getContent(), "\n") !== 0
 			)
 			{
 				continue;
