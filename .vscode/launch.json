@@ -1,0 +1,14 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "PHP",
+			"type": "php",
+			"request": "launch",
+			"ignore": ["src/vendor/**/*.php"],
+			"pathMappings": {
+				"/var/www/html": "${workspaceFolder}"
+			}
+		}
+	]
+}

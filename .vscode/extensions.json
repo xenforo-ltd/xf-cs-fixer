@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+		"bmewburn.vscode-intelephense-client",
+		"editorconfig.editorconfig",
+		"github.vscode-github-actions",
+		"github.vscode-pull-request-github",
+		"junstyle.php-cs-fixer",
+		"kasik96.latte",
+		"recca0120.vscode-phpunit",
+		"xdebug.php-debug"
+    ]
+}

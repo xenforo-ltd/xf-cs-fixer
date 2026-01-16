@@ -1,0 +1,119 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "composer update",
+			"detail": "Update dependencies with Composer",
+			"icon": {
+				"id": "download"
+			},
+			"command": "composer",
+			"args": ["update"],
+			"problemMatcher": [],
+			"presentation": {
+				"panel": "dedicated",
+				"clear": true,
+			}
+		},
+		{
+			"label": "composer validate",
+			"detail": "Validate Composer configuration",
+			"icon": {
+				"id": "check"
+			},
+			"command": "composer",
+			"args": ["validate"],
+			"problemMatcher": [],
+			"presentation": {
+				"panel": "dedicated",
+				"clear": true
+			}
+		},
+		{
+			"label": "php-cs-fixer:check",
+			"detail": "Check formatting with PHP-CS-Fixer",
+			"icon": {
+				"id": "search-sparkle"
+			},
+			"command": "composer",
+			"args": ["php-cs-fixer:check"],
+			"problemMatcher": [],
+			"presentation": {
+				"panel": "dedicated",
+				"clear": true
+			}
+		},
+		{
+			"label": "php-cs-fixer:fix",
+			"detail": "Fix formatting with PHP-CS-Fixer",
+			"icon": {
+				"id": "wand"
+			},
+			"command": "composer",
+			"args": ["php-cs-fixer:fix"],
+			"problemMatcher": [],
+			"presentation": {
+				"panel": "dedicated",
+				"clear": true
+			}
+		},
+		{
+			"label": "phpstan",
+			"detail": "Perform static analysis with PHPStan",
+			"icon": {
+				"id": "lightbulb"
+			},
+			"command": "composer",
+			"args": ["phpstan"],
+			"problemMatcher": [],
+			"presentation": {
+				"panel": "dedicated",
+				"clear": true
+			}
+		},
+		{
+			"label": "phpstan:generate-baseline",
+			"detail": "Generate PHPStan baseline file",
+			"icon": {
+				"id": "pulse"
+			},
+			"command": "composer",
+			"args": ["phpstan:generate-baseline"],
+			"problemMatcher": [],
+			"presentation": {
+				"panel": "dedicated",
+				"clear": true
+			}
+		},
+		{
+			"label": "phpunit",
+			"detail": "Run PHPUnit tests",
+			"icon": {
+				"id": "beaker"
+			},
+			"group": "test",
+			"command": "composer",
+			"args": ["phpunit"],
+			"problemMatcher": [],
+			"presentation": {
+				"panel": "dedicated",
+				"clear": true
+			}
+		},
+		{
+			"label": "phpunit:coverage",
+			"detail": "Run PHPUnit tests with coverage",
+			"icon": {
+				"id": "coverage"
+			},
+			"group": "test",
+			"command": "composer",
+			"args": ["phpunit:coverage"],
+			"problemMatcher": [],
+			"presentation": {
+				"panel": "dedicated",
+				"clear": true
+			}
+		}
+	]
+}
