@@ -15,11 +15,19 @@
     "config": {
         "platform": {
             "php": "7.4"
+        },
+        "preferred-install": {
+            "friendsofphp/php-cs-fixer": "source"
         }
     },
     "autoload": {
         "psr-4": {
             "XFCsFixer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "XFCsFixer\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -29,7 +37,10 @@
 
         "phpstan": "phpstan",
         "phpstan:all": "phpstan --configuration=phpstan.config.neon",
-        "phpstan:generate-baseline": "phpstan --generate-baseline=phpstan-baseline.php --allow-empty-baseline"
+        "phpstan:generate-baseline": "phpstan --generate-baseline=phpstan-baseline.php --allow-empty-baseline",
+
+        "phpunit": "phpunit",
+        "phpunit:coverage": "@phpunit --coverage-text"
     },
     "scripts-descriptions": {
         "php-cs-fixer": "Run PHP CS Fixer",
@@ -38,14 +49,19 @@
 
         "phpstan": "Run PHPStan",
         "phpstan:all": "Run PHPStan without the baseline",
-        "phpstan:generate-baseline": "Run PHPStan to regenerate the baseline"
+        "phpstan:generate-baseline": "Run PHPStan to regenerate the baseline",
+
+        "phpunit": "Run PHPUnit",
+        "phpunit:coverage": "Run PHPUnit with code coverage"
     },
     "require": {
         "php": "^7.4 || ^8.0",
         "friendsofphp/php-cs-fixer": "^3.89.1"
     },
     "require-dev": {
+        "php-cs-fixer/phpunit-constraint-isidenticalstring": "^1.6",
         "phpstan/phpstan": "^2.1",
-        "phpstan/phpstan-strict-rules": "^2.0"
+        "phpstan/phpstan-strict-rules": "^2.0",
+        "phpunit/phpunit": "^9.6"
     }
 }

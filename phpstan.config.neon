@@ -10,9 +10,12 @@ parameters:
 	reportAnyTypeWideningInVarTag: true
 	checkMissingOverrideMethodAttribute: true
 	checkMissingCallableSignature: true
+	bootstrapFiles:
+		- tests/bootstrap.php
 
 	paths:
 		- src
+		- tests
 
 	ignoreErrors:
 		-
