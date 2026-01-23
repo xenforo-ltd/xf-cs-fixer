@@ -5,7 +5,7 @@
 			"name": "PHP",
 			"type": "php",
 			"request": "launch",
-			"ignore": ["src/vendor/**/*.php"],
+			"ignore": ["vendor/**/*.php"],
 			"pathMappings": {
 				"/var/www/html": "${workspaceFolder}"
 			}

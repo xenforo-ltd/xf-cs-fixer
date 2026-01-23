@@ -32,12 +32,12 @@
     },
     "scripts": {
         "php-cs-fixer": "php-cs-fixer",
-        "php-cs-fixer:check": "php-cs-fixer check",
-        "php-cs-fixer:fix": "php-cs-fixer fix",
+        "php-cs-fixer:check": "@php-cs-fixer check",
+        "php-cs-fixer:fix": "@php-cs-fixer fix",
 
         "phpstan": "phpstan",
-        "phpstan:all": "phpstan --configuration=phpstan.config.neon",
-        "phpstan:generate-baseline": "phpstan --generate-baseline=phpstan-baseline.php --allow-empty-baseline",
+        "phpstan:all": "@phpstan --configuration=phpstan.config.neon",
+        "phpstan:generate-baseline": "@phpstan --generate-baseline=phpstan-baseline.php --allow-empty-baseline",
 
         "phpunit": "phpunit",
         "phpunit:coverage": "@phpunit --coverage-text"
