@@ -5,17 +5,17 @@ on:
 
   push:
     branches:
-      - 'main'
+      - "main"
     paths:
-      - 'composer.json'
-      - 'composer.lock'
+      - "composer.json"
+      - "composer.lock"
 
   pull_request:
     branches:
-      - 'main'
+      - "main"
     paths:
-      - 'composer.json'
-      - 'composer.lock'
+      - "composer.json"
+      - "composer.lock"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}

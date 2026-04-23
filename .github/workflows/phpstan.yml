@@ -4,21 +4,21 @@ on:
   workflow_dispatch:
     inputs:
       exclude_baseline:
-        description: 'Exclude baseline'
+        description: "Exclude baseline"
         type: boolean
         default: false
 
   push:
     branches:
-      - 'main'
+      - "main"
     paths:
-      - '**.php'
+      - "**.php"
 
   pull_request:
     branches:
-      - 'main'
+      - "main"
     paths:
-      - '**.php'
+      - "**.php"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}

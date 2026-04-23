@@ -5,15 +5,15 @@ on:
 
   push:
     branches:
-      - 'main'
+      - "main"
     paths:
-      - '**.php'
+      - "**.php"
 
   pull_request:
     branches:
-      - 'main'
+      - "main"
     paths:
-      - '**.php'
+      - "**.php"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}

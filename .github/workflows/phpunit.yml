@@ -5,15 +5,17 @@ on:
 
   push:
     branches:
-      - 'main'
+      - "main"
     paths:
-      - '**.php'
+      - "**.php"
+      - phpunit.xml.dist
 
   pull_request:
     branches:
-      - 'main'
+      - "main"
     paths:
-      - '**.php'
+      - "**.php"
+      - phpunit.xml.dist
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
