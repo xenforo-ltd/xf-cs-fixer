@@ -5,10 +5,12 @@
 			"label": "composer update",
 			"detail": "Update dependencies with Composer",
 			"icon": {
-				"id": "download"
+				"id": "download",
 			},
 			"command": "composer",
-			"args": ["update"],
+			"args": [
+				"update"
+			],
 			"problemMatcher": [],
 			"presentation": {
 				"panel": "dedicated",
@@ -19,101 +21,115 @@
 			"label": "composer validate",
 			"detail": "Validate Composer configuration",
 			"icon": {
-				"id": "check"
+				"id": "check",
 			},
 			"command": "composer",
-			"args": ["validate"],
+			"args": [
+				"validate",
+			],
 			"problemMatcher": [],
 			"presentation": {
 				"panel": "dedicated",
-				"clear": true
+				"clear": true,
 			}
 		},
 		{
 			"label": "php-cs-fixer:check",
 			"detail": "Check formatting with PHP-CS-Fixer",
 			"icon": {
-				"id": "search-sparkle"
+				"id": "search-sparkle",
 			},
 			"command": "composer",
-			"args": ["php-cs-fixer:check"],
+			"args": [
+				"php-cs-fixer:check",
+			],
 			"problemMatcher": [],
 			"presentation": {
 				"panel": "dedicated",
-				"clear": true
+				"clear": true,
 			}
 		},
 		{
 			"label": "php-cs-fixer:fix",
 			"detail": "Fix formatting with PHP-CS-Fixer",
 			"icon": {
-				"id": "wand"
+				"id": "wand",
 			},
 			"command": "composer",
-			"args": ["php-cs-fixer:fix"],
+			"args": [
+				"php-cs-fixer:fix",
+			],
 			"problemMatcher": [],
 			"presentation": {
 				"panel": "dedicated",
-				"clear": true
+				"clear": true,
 			}
 		},
 		{
 			"label": "phpstan",
 			"detail": "Perform static analysis with PHPStan",
 			"icon": {
-				"id": "lightbulb"
+				"id": "lightbulb",
 			},
 			"command": "composer",
-			"args": ["phpstan"],
+			"args": [
+				"phpstan",
+			],
 			"problemMatcher": [],
 			"presentation": {
 				"panel": "dedicated",
-				"clear": true
+				"clear": true,
 			}
 		},
 		{
 			"label": "phpstan:generate-baseline",
 			"detail": "Generate PHPStan baseline file",
 			"icon": {
-				"id": "pulse"
+				"id": "pulse",
 			},
 			"command": "composer",
-			"args": ["phpstan:generate-baseline"],
+			"args": [
+				"phpstan:generate-baseline",
+			],
 			"problemMatcher": [],
 			"presentation": {
 				"panel": "dedicated",
-				"clear": true
+				"clear": true,
 			}
 		},
 		{
 			"label": "phpunit",
 			"detail": "Run PHPUnit tests",
 			"icon": {
-				"id": "beaker"
+				"id": "beaker",
 			},
 			"group": "test",
 			"command": "composer",
-			"args": ["phpunit"],
+			"args": [
+				"phpunit",
+			],
 			"problemMatcher": [],
 			"presentation": {
 				"panel": "dedicated",
-				"clear": true
+				"clear": true,
 			}
 		},
 		{
 			"label": "phpunit:coverage",
 			"detail": "Run PHPUnit tests with coverage",
 			"icon": {
-				"id": "coverage"
+				"id": "coverage",
 			},
 			"group": "test",
 			"command": "composer",
-			"args": ["phpunit:coverage"],
+			"args": [
+				"phpunit:coverage",
+			],
 			"problemMatcher": [],
 			"presentation": {
 				"panel": "dedicated",
-				"clear": true
-			}
-		}
-	]
+				"clear": true,
+			},
+		},
+	],
 }

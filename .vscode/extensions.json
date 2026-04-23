@@ -1,5 +1,5 @@
 {
-    "recommendations": [
+	"recommendations": [
 		"bmewburn.vscode-intelephense-client",
 		"editorconfig.editorconfig",
 		"github.vscode-github-actions",
@@ -7,6 +7,6 @@
 		"junstyle.php-cs-fixer",
 		"kasik96.latte",
 		"recca0120.vscode-phpunit",
-		"xdebug.php-debug"
-    ]
+		"xdebug.php-debug",
+	],
 }

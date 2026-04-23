@@ -1,12 +1,14 @@
 {
 	"[php]": {
-		"editor.defaultFormatter": "junstyle.php-cs-fixer"
+		"editor.defaultFormatter": "junstyle.php-cs-fixer",
 	},
 	"files.exclude": {
 		".php-cs-fixer.cache": true,
-		".phpunit.result.cache": true
+		".phpunit.result.cache": true,
 	},
 	"php-cs-fixer.executablePath": "${workspaceFolder}/vendor/bin/php-cs-fixer",
 	"php-cs-fixer.lastDownload": 0,
 	"php-cs-fixer.pathMode": "intersection",
+	"phpunit.debuggerConfig": "PHP",
+	"phpunit.phpunit": "${workspaceFolder}/vendor/bin/phpunit",
 }
