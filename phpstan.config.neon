@@ -20,6 +20,8 @@ parameters:
 
 	ignoreErrors:
 		-
+			identifier: method.missingOverride
+		-
 			identifier: class.extendsInternalClass
 		-
 			identifier: property.internalClass
