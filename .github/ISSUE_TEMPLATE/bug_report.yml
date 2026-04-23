@@ -1,0 +1,60 @@
+name: Bug report
+description: Report a reproducible problem
+type: Bug
+
+body:
+  - id: note
+    type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report!
+
+  - id: summary
+    type: textarea
+    attributes:
+      label: Summary
+      description: What happened and what did you expect?
+      placeholder: An error occurred when I...
+    validations:
+      required: true
+
+  - id: steps
+    type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: Include exact commands and relevant output.
+      placeholder: |
+        1. Run `php-cs-fixer check`
+        2. See error
+    validations:
+      required: true
+
+  - id: version
+    type: textarea
+    attributes:
+      label: PHP CS Fixer version
+      description: Paste output of `php-cs-fixer --version`.
+      placeholder: |
+        PHP CS Fixer 3.0.0
+        PHP runtime: 8.5.0
+      render: json
+    validations:
+      required: true
+
+  - id: screenshots
+    type: upload
+    attributes:
+      label: Upload screenshots
+      description: If applicable, add screenshots to help explain your problem.
+    validations:
+      required: false
+      accept: ".png,.jpg,.jpeg,.gif,.webp"
+
+  - id: terms
+    type: checkboxes
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/xenforo-ltd/xf-cs-fixer/blob/main/CODE_OF_CONDUCT.md).
+      options:
+        - label: I agree to follow the [Code of Conduct](https://github.com/xenforo-ltd/xf-cs-fixer/blob/main/CODE_OF_CONDUCT.md)
+          required: true

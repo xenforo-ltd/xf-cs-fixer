@@ -1,0 +1,46 @@
+name: Feature request
+description: Suggest an improvement
+type: Feature
+
+body:
+  - id: note
+    type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest an improvement!
+
+  - id: problem
+    type: textarea
+    attributes:
+      label: Problem
+      description: What problem should this solve?
+      placeholder: I want to be able to...
+    validations:
+      required: true
+
+  - id: proposal
+    type: textarea
+    attributes:
+      label: Proposed solution
+      description: Describe the behavior that you want.
+      placeholder: I propose that...
+    validations:
+      required: true
+
+  - id: alternatives
+    type: textarea
+    attributes:
+      label: Alternatives considered
+      description: Describe any alternative solutions or features you've considered.
+      placeholder: I also considered...
+
+  - id: terms
+    type: checkboxes
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of
+        Conduct](https://github.com/xenforo-ltd/xf-cs-fixer/blob/main/CODE_OF_CONDUCT.md).
+      options:
+        - label: I agree to follow the [Code of
+            Conduct](https://github.com/xenforo-ltd/xf-cs-fixer/blob/main/CODE_OF_CONDUCT.md)
+          required: true
