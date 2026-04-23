@@ -7,7 +7,8 @@ use Composer\Autoload\ClassLoader;
 /** @var ClassLoader */
 $autoloader = require __DIR__ . '/../vendor/autoload.php';
 
-$autoloader->addPsr4(
-	'PhpCsFixer\\Tests\\',
-	__DIR__ . '/../vendor/friendsofphp/php-cs-fixer/tests/'
-);
+$phpCsFixerTestsPath = __DIR__ . '/../vendor/friendsofphp/php-cs-fixer/tests/';
+if (is_dir($phpCsFixerTestsPath))
+{
+	$autoloader->addPsr4('PhpCsFixer\\Tests\\', $phpCsFixerTestsPath);
+}
