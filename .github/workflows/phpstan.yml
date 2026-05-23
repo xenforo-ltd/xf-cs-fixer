@@ -26,22 +26,25 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
 
-permissions:
-  contents: read
-  packages: read
+permissions: {}
 
 jobs:
   phpstan:
     name: PHPStan
     runs-on: ubuntu-latest
     container: ghcr.io/xenforo-ltd/php-ci:8.5
+    permissions:
+      contents: read
+      packages: read # required for php-ci container
 
     steps:
       - name: Install git
         run: apk add --no-cache git
 
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with:
+          persist-credentials: false
 
       - name: Get cache data
         id: cache-data
@@ -50,7 +53,7 @@ jobs:
           echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
       - name: Set up Composer cache
-        uses: actions/cache@v5
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5
         with:
           path: ${{ steps.cache-data.outputs.composer_path }}
           key: composer-${{ steps.cache-data.outputs.date }}
@@ -60,7 +63,7 @@ jobs:
         run: composer install
 
       - name: Set up PHPStan cache
-        uses: actions/cache@v5
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5
         with:
           path: /tmp/phpstan
           key: phpstan-${{ steps.cache-data.outputs.date }}
@@ -69,4 +72,6 @@ jobs:
             phpstan-
 
       - name: PHPStan
-        run: composer ${{ inputs.exclude_baseline && 'phpstan:all' || 'phpstan' }}
+        run: composer ${PHPSTAN_COMMAND}
+        env:
+          PHPSTAN_COMMAND: ${{ inputs.exclude_baseline && 'phpstan:all' || 'phpstan' }}
