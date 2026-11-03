@@ -3,11 +3,12 @@ description: Suggest an improvement
 type: Feature
 
 body:
-  - id: note
-    type: markdown
+  - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to suggest an improvement!
+        Thank you for suggesting an improvement. Please search [existing issues](https://github.com/xenforo-ltd/xf-cs-fixer/issues) first.
+        For help questions, see [support](https://github.com/xenforo-ltd/xf-cs-fixer/blob/main/.github/SUPPORT.md).
+        Report vulnerabilities through a [private security report](https://github.com/xenforo-ltd/xf-cs-fixer/security/advisories/new).
 
   - id: problem
     type: textarea
@@ -22,7 +23,7 @@ body:
     type: textarea
     attributes:
       label: Proposed solution
-      description: Describe the behavior that you want.
+      description: Describe the formatting or rule behavior you want.
       placeholder: I propose that...
     validations:
       required: true
@@ -31,16 +32,14 @@ body:
     type: textarea
     attributes:
       label: Alternatives considered
-      description: Describe any alternative solutions or features you've considered.
+      description: Describe any alternative solutions or features you considered.
       placeholder: I also considered...
 
   - id: terms
     type: checkboxes
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of
-        Conduct](https://github.com/xenforo-ltd/xf-cs-fixer/blob/main/CODE_OF_CONDUCT.md).
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/xenforo-ltd/xf-cs-fixer/blob/main/.github/CODE_OF_CONDUCT.md).
       options:
-        - label: I agree to follow the [Code of
-            Conduct](https://github.com/xenforo-ltd/xf-cs-fixer/blob/main/CODE_OF_CONDUCT.md)
+        - label: I agree to follow the [Code of Conduct](https://github.com/xenforo-ltd/xf-cs-fixer/blob/main/.github/CODE_OF_CONDUCT.md).
           required: true

@@ -3,17 +3,19 @@ description: Report a reproducible problem
 type: Bug
 
 body:
-  - id: note
-    type: markdown
+  - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to file a bug report!
+        Thank you for reporting a bug. Please search [existing issues](https://github.com/xenforo-ltd/xf-cs-fixer/issues) first.
+        For help questions, see [support](https://github.com/xenforo-ltd/xf-cs-fixer/blob/main/.github/SUPPORT.md).
+        Report vulnerabilities through a [private security report](https://github.com/xenforo-ltd/xf-cs-fixer/security/advisories/new).
+        Do not include passwords, tokens, or private source code in your report or output.
 
   - id: summary
     type: textarea
     attributes:
       label: Summary
-      description: What happened and what did you expect?
+      description: Describe the expected and actual behavior.
       placeholder: An error occurred when I...
     validations:
       required: true
@@ -22,22 +24,21 @@ body:
     type: textarea
     attributes:
       label: Steps to reproduce
-      description: Include exact commands and relevant output.
-      placeholder: |
-        1. Run `php-cs-fixer check`
-        2. See error
+      description: Include the active configuration or affected rules, exact command, and relevant output or error.
     validations:
       required: true
+
+  - id: example
+    type: textarea
+    attributes:
+      label: Formatting example
+      description: For formatting problems, include minimal PHP input and the actual and expected formatted output.
 
   - id: version
     type: textarea
     attributes:
-      label: PHP CS Fixer version
-      description: Paste output of `php-cs-fixer --version`.
-      placeholder: |
-        PHP CS Fixer 3.0.0
-        PHP runtime: 8.5.0
-      render: json
+      label: Versions
+      description: Paste the output of `composer show xenforo-ltd/xf-cs-fixer`, `vendor/bin/php-cs-fixer --version`, and `php --version`.
     validations:
       required: true
 
@@ -45,7 +46,7 @@ body:
     type: upload
     attributes:
       label: Upload screenshots
-      description: If applicable, add screenshots to help explain your problem.
+      description: Add screenshots if they help explain the problem.
     validations:
       required: false
       accept: ".png,.jpg,.jpeg,.gif,.webp"
@@ -54,7 +55,7 @@ body:
     type: checkboxes
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/xenforo-ltd/xf-cs-fixer/blob/main/CODE_OF_CONDUCT.md).
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/xenforo-ltd/xf-cs-fixer/blob/main/.github/CODE_OF_CONDUCT.md).
       options:
-        - label: I agree to follow the [Code of Conduct](https://github.com/xenforo-ltd/xf-cs-fixer/blob/main/CODE_OF_CONDUCT.md)
+        - label: I agree to follow the [Code of Conduct](https://github.com/xenforo-ltd/xf-cs-fixer/blob/main/.github/CODE_OF_CONDUCT.md).
           required: true

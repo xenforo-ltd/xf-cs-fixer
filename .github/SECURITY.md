@@ -6,17 +6,22 @@ Only the latest released version is supported with security fixes.
 
 ## Reporting a vulnerability
 
-Please do not open public issues for security vulnerabilities.
+Do not open public issues for security vulnerabilities.
 
-Send a [private report](https://github.com/xenforo-ltd/xf-cs-fixer/security/advisories/new) with:
+Open a [private report](https://github.com/xenforo-ltd/xf-cs-fixer/security/advisories/new) with:
 
-1. Affected version
-2. Impact summary
-3. Reproduction steps or proof of concept
-4. Suggested remediation (if available)
+1. A short summary of the problem.
+2. Complete details, including implicated source code.
+3. A proof of concept, including reproduction instructions.
+4. Impact details.
+5. The affected version.
+
+For dependency CVEs, include evidence that the issue is exploitable in the
+XenForo Coding Standards Fixer, such as a reachable vulnerable call chain or a
+proof of concept showing impact. A dependency version and CVE identifier alone
+are not sufficient.
 
 ## Response expectations
 
-1. Initial acknowledgement within 3 business days.
-2. Triage and severity assessment after reproduction.
-3. Coordinated disclosure once a fix is available.
+1. Triage and severity assessment after reproduction.
+2. Coordinated disclosure once a fix is available.

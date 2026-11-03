@@ -1,6 +1,9 @@
 blank_issues_enabled: false
 
 contact_links:
-  - name: Ask a question on how to use XenForo Coding Standards Fixer
+  - name: Ask a question about how to use the XenForo Coding Standards Fixer
     url: https://xenforo.com/community/forums/xenforo-development-discussions.34/
-    about: For general-purpose questions and answers, see our development discussions forum.
+    about: Use the development discussions forum for usage and help questions.
+  - name: Report a security vulnerability
+    url: https://github.com/xenforo-ltd/xf-cs-fixer/security/advisories/new
+    about: Report security vulnerabilities privately.
